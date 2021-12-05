@@ -36,7 +36,7 @@ img {
 }
 
 body { 
-	font: .8em Arial, Verdana, Tahoma, Sans-Serif; 
+	font: 1em Arial, Verdana, Tahoma, Sans-Serif; 
 	background: #f4f4f4 url(../images/bgtile.jpg) repeat-x; 
 	color: #555; 
 }
@@ -102,7 +102,7 @@ h5 {
 /* content holder */
 .wrap { 
 	margin: 0 auto; 
-	width: 960px;
+	max-width: 960px;
 }
 
 /* menu */
@@ -132,7 +132,7 @@ h5 {
 	top: 98px;
 	background: url(../images/dot.png); 
 	padding: 3px;
-	font-size: .92em; 
+	font-size: 1em; 
 	position: absolute; 
 	display: none; 
 	z-index: 100; 	
@@ -161,7 +161,7 @@ h5 {
 	clear: both; 
 	height: 296px; 
 	background: url(../images/shadow.png) no-repeat left bottom;
-	margin: 0 0 25px;
+	margin: 0 0 5px;
 }
 #slideshow {
     position:relative;
@@ -169,6 +169,8 @@ h5 {
 }
 #slideshow img {
 	float: left;
+	width: 100%;
+	height: 280px;
 }
 #slideshow div {
     position: absolute;
@@ -244,7 +246,7 @@ h5 {
 #main { 
 	clear: left; 
 	float: left; 
-	width: 680px;
+	width: 70%;
 	border-right: 1px dotted #ddd;
 	padding: 0 30px 0 0;
 	margin: 0 0 30px;
@@ -256,10 +258,17 @@ h5 {
 	border-bottom: 1px dotted #ddd; 
 }
 
-/* holder for page content */
-#page { 
-	
+#intro p {
+	font-size: 1.1em;
+	padding: 10px;
 }
+
+#main p {
+	font-size: 1.1em;
+	padding: 10px;
+}
+
+/* holder for page content */
 .justify { 
 	text-align: justify; 
 }
@@ -301,7 +310,7 @@ h5 {
 	float: left; 
 	width: 40px; 
 	text-align: right; 
-	font-size: .9em; 
+	font-size: 1em; 
 	padding: 4px 0 0;
 }
 .blog-date span { 
@@ -347,8 +356,10 @@ h5 {
 
 .bit {
 	float: left;
-	width: 203px;
+	width: 200px;
 	padding: 0 35px 0 0;
+	margin-right: 10px;
+	box-sizing: border-box;
 }
 .bit h4 {
 	margin: 0 0 18px;
@@ -356,7 +367,11 @@ h5 {
 .bit img { margin: 0 0 8px; }
 
 .bit p {
-	font-size: .9em;
+	font-size: 1em;
+}
+#main .bit p {
+	font-size: 1em;
+	padding: 0px;
 }
 .bit.last { padding-right: 0; }
 .more { margin: 0; }
@@ -365,9 +380,10 @@ h5 {
 /* sidebar */
 #side { 
 	float: right; 
-	width: 220px; 
-	font-size: .9em;
+	width: 25%; 
+	font-size: 1em;
 }
+
 #side h4 {
 	margin: 0 0 23px;
 	font-size: 1.3em;
@@ -389,7 +405,7 @@ h5 {
 #quote {
 	margin: 0 0 30px;
 	padding: 20px 0 0 0;
-	font-size: .94em;
+	font-size: 1em;
 }
 
 /* side menu */
@@ -434,7 +450,7 @@ input.submit {
 	clear: both; 
 	color: #999; 
 	background: url(../images/footertile.jpg) repeat-x;
-	font-size: .9em;
+	font-size: 1em;
 }
 #footerbg {
 	padding: 35px 0 15px 0;
@@ -461,7 +477,7 @@ input.submit {
 #fleft {
 	clear: both;
 	padding: 25px 0 0;
-	font-size: .94em;
+	font-size: 1em;
 }
 
 #copy { 
@@ -473,4 +489,42 @@ input.submit {
 
 .popup_text {
     width: 207px;
+}
+
+#notice {
+	width: 100%;
+	background-color: khaki;
+	color: black;
+	font-size: 1em;
+	padding: 10px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+#notice a {
+	color: darkblue;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 860px) {
+	#side {
+		display: none;
+	}
+
+	#main { 
+		width: 100%;
+	}
+
+	.bit {
+		width: 100%;
+	}
+
+	.bit img {
+		width: 95%;
+	}
+
+	#main .bit p {
+		padding: 10px;
+	}
 }
