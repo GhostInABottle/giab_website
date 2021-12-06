@@ -499,7 +499,6 @@ input.submit {
 	padding: 10px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
-	width: 100%;
 }
 
 #notice a {
@@ -514,6 +513,7 @@ input.submit {
 
 	#main { 
 		width: 100%;
+        box-sizing: border-box;
 	}
 
 	.bit {
